@@ -35,19 +35,29 @@ const Maintenance = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-blue-200 via-white to-blue-300 flex flex-col items-center px-4 md:px-16 py-10">
-      {/* Logo */}
-      <img src={logo} alt="Company Logo" className="h-20 md:h-24 -mt-6 mb-2" />
-
-      {/* Glass-like Card Container */}
-      <div className="max-w-7xl w-full rounded-3xl bg-white/30 backdrop-blur-md shadow-xl px-6 md:px-12 py-10 grid md:grid-cols-2 gap-12 items-center">
+    <div
+      className="min-h-screen w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 px-4 md:px-16 py-10 overflow-y-auto lg:overflow-y-hidden"
+      style={{
+        overflowY: window.innerWidth < 1500 ? "hidden" : "auto",
+      }}
+    >
+      <div className="max-w-7xl mx-auto rounded-3xl bg-white/30 backdrop-blur-md shadow-xl px-6 md:px-12 py-10 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6">
+          {/* Logo inside box */}
+          <img
+            src={logo}
+            alt="Digisoft Logo"
+            className="h-16 md:h-20 drop-shadow mb-4"
+          />
+
           <h1 className="text-4xl md:text-5xl font-bold text-blue-800">
             We're <span className="text-black">Updating</span> Our Website
           </h1>
+
           <p className="text-lg text-gray-700">
-            Our team is working on something amazing! We'll be back shortly with a better experience.
+            Our team is working on something amazing! We'll be back shortly
+            with a better experience.
           </p>
 
           {/* Countdown */}
@@ -65,7 +75,7 @@ const Maintenance = () => {
             ))}
           </div>
 
-          {/* Contact Us */}
+          {/* Contact Info */}
           <div className="text-sm md:text-base space-y-3 pt-4">
             <div className="flex items-center gap-3 text-gray-800">
               <Mail className="w-5 h-5 text-blue-600" />
@@ -131,19 +141,20 @@ const Maintenance = () => {
           </div>
         </div>
 
-        {/* Right Image */}
+        {/* Right Illustration */}
         <div className="w-full">
           <img
             src={maintenance}
             alt="Under Construction"
-            className="w-full h-1/3 object-contain"
+            className="w-full h-auto object-contain"
           />
         </div>
       </div>
 
       {/* Footer */}
       <p className="mt-10 text-sm text-gray-600 text-center">
-        &copy; {new Date().getFullYear()} Digisoft Developers Pvt. Ltd. All rights reserved.
+        &copy; {new Date().getFullYear()} Digisoft Developers Pvt. Ltd. All
+        rights reserved.
       </p>
     </div>
   );
