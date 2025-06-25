@@ -16,6 +16,26 @@ const targetDate = new Date("2025-07-01T00:00:00");
 const Maintenance = () => {
   const [timeLeft, setTimeLeft] = useState({});
 
+
+  useEffect(() => {
+    const handleScrollControl = () => {
+      if (window.innerWidth < 1920) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    };
+
+    handleScrollControl(); 
+    window.addEventListener("resize", handleScrollControl); 
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("resize", handleScrollControl);
+    };
+  }, []);
+
+  // Countdown logic
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -35,16 +55,11 @@ const Maintenance = () => {
   }, []);
 
   return (
-    <div
-      className="min-h-screen w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 px-4 md:px-16 py-10 overflow-y-auto lg:overflow-y-hidden"
-      style={{
-        overflowY: window.innerWidth < 1500 ? "hidden" : "auto",
-      }}
-    >
+    <div className="min-h-screen w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 px-4 md:px-16 py-10">
       <div className="max-w-7xl mx-auto rounded-3xl bg-white/30 backdrop-blur-md shadow-xl px-6 md:px-12 py-10 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6">
-          {/* Logo inside box */}
+          {/* Logo inside content */}
           <img
             src={logo}
             alt="Digisoft Logo"
@@ -75,7 +90,7 @@ const Maintenance = () => {
             ))}
           </div>
 
-          {/* Contact Info */}
+          {/* Contact us */}
           <div className="text-sm md:text-base space-y-3 pt-4">
             <div className="flex items-center gap-3 text-gray-800">
               <Mail className="w-5 h-5 text-blue-600" />
@@ -141,7 +156,7 @@ const Maintenance = () => {
           </div>
         </div>
 
-        {/* Right Illustration */}
+        {/* Right Side */}
         <div className="w-full">
           <img
             src={maintenance}
