@@ -16,25 +16,6 @@ const targetDate = new Date("2025-07-01T00:00:00");
 const Maintenance = () => {
   const [timeLeft, setTimeLeft] = useState({});
 
-
-  useEffect(() => {
-    const handleScrollControl = () => {
-      if (window.innerWidth < 1920) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
-    };
-
-    handleScrollControl(); 
-    window.addEventListener("resize", handleScrollControl); 
-
-    return () => {
-      document.body.style.overflow = "auto";
-      window.removeEventListener("resize", handleScrollControl);
-    };
-  }, []);
-
   // Countdown logic
   useEffect(() => {
     const interval = setInterval(() => {
