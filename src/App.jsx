@@ -1,13 +1,16 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Home/Hero";
+import Banner from "./components/Home/Banner";
+import Maintenance from "./pages/UMaintenance.jsx";
 
 function App() {
   return (
+    
     <div className="relative">
-      <Navbar />
-      <main className="pt-20">
+      <Maintenance />
+      {/* <Navbar />
       <Hero />
-      </main>
+      <Banner /> */}
     </div>
   );
 }

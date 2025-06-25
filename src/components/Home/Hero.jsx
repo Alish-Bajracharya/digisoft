@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-white font-worksans">
-      <div className=" container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl -mt-32 flex flex-col md:flex-row items-center justify-between">
+      <div className=" container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl flex flex-col md:flex-row items-center justify-between">
         
         {/* Left Text Content */}
         <div
@@ -40,7 +40,7 @@ const Hero = () => {
           className={`w-full md:w-1/2 transition-all duration-1000 ease-out delay-200 ${
             show ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
           }`}
-        >
+        >          
           <img
             src={heroImage}
             alt="Tablet Showcase"
