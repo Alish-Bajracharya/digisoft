@@ -9,9 +9,9 @@ import {
   Twitter,
 } from "lucide-react";
 import logo from "../assets/images/digilogo.png";
-import maintenance from "../assets/images/maintenance.webp";
+import maintenance from "../assets/images/const.png";
 
-const targetDate = new Date("2025-07-10T00:00:00");
+const targetDate = new Date("2025-07-01T00:00:00");
 
 const Maintenance = () => {
   const [timeLeft, setTimeLeft] = useState({});
@@ -22,92 +22,76 @@ const Maintenance = () => {
       const difference = targetDate - now;
 
       const t = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        days: Math.max(Math.floor(difference / (1000 * 60 * 60 * 24)), 0),
+        hours: Math.max(Math.floor((difference / (1000 * 60 * 60)) % 24), 0),
+        minutes: Math.max(Math.floor((difference / 1000 / 60) % 60), 0),
+        seconds: Math.max(Math.floor((difference / 1000) % 60), 0),
       };
 
       setTimeLeft(t);
-
-      if (difference <= 0) clearInterval(interval);
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-300 to-blue-50 flex flex-col items-center justify-start px-4 py-8">
-      
+    <div className="min-h-screen w-full bg-gradient-to-br from-blue-200 via-white to-blue-300 flex flex-col items-center px-4 md:px-16 py-10">
       {/* Logo */}
-      <div className="mb-5 ">
-        <img
-          src={logo}
-          alt="Digisoft Logo"
-          className="h-20 md:h-24 mx-auto drop-shadow-md"
-        />
-      </div>
+      <img src={logo} alt="Company Logo" className="h-20 md:h-24 -mt-6 mb-2" />
 
-      <div className="max-w-7xl w-full grid md:grid-cols-2 gap-10 mt-5 items-center animate-fadeIn">
-        
+      {/* Glass-like Card Container */}
+      <div className="max-w-7xl w-full rounded-3xl bg-white/30 backdrop-blur-md shadow-xl px-6 md:px-12 py-10 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
-        <div>
-          <h1 className="text-3xl md:text-5xl text-blue-700 font-bold mb-6 text-center md:text-left">
-            Website is Under <span className="text-black">MAINTENANCE</span>
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-800">
+            We're <span className="text-black">Updating</span> Our Website
           </h1>
-
-          <p className="text-lg md:text-xl text-gray-700 mb-6 text-center md:text-left">
-            We’re working hard to improve your experience. Stay tuned! Our Website is currently undergoing scheduled maintenance to serve you better.
-                        Thankyou for your patience.
+          <p className="text-lg text-gray-700">
+            Our team is working on something amazing! We'll be back shortly with a better experience.
           </p>
 
-          {/* Countdown Timer */}
-          <div className="flex justify-center md:justify-start space-x-6 mb-8 text-blue-800 font-semibold text-xl">
-            <div className="text-center">
-              <div className="text-3xl">{timeLeft.days || 0}</div>
-              <div className="text-sm text-gray-700">Days</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl">{timeLeft.hours || 0}</div>
-              <div className="text-sm text-gray-700">Hours</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl">{timeLeft.minutes || 0}</div>
-              <div className="text-sm text-gray-700">Minutes</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl">{timeLeft.seconds || 0}</div>
-              <div className="text-sm text-gray-700">Seconds</div>
-            </div>
+          {/* Countdown */}
+          <div className="flex flex-wrap gap-4 text-center">
+            {["days", "hours", "minutes", "seconds"].map((unit) => (
+              <div
+                key={unit}
+                className="bg-white/80 shadow-sm rounded-xl px-4 py-3 min-w-[70px]"
+              >
+                <div className="text-2xl font-bold text-blue-900">
+                  {timeLeft[unit] || "00"}
+                </div>
+                <div className="text-sm uppercase text-gray-600">{unit}</div>
+              </div>
+            ))}
           </div>
 
-          {/* Contact Info */}
-          <div className="text-gray-800 space-y-4 mb-6 text-sm md:text-base">
-            <div className="flex items-center gap-3">
+          {/* Contact Us */}
+          <div className="text-sm md:text-base space-y-3 pt-4">
+            <div className="flex items-center gap-3 text-gray-800">
               <Mail className="w-5 h-5 text-blue-600" />
               <a
                 href="mailto:info@digisoft.com.np"
-                className="hover:underline hover:text-blue-800"
+                className="hover:underline hover:text-blue-900"
               >
                 info@digisoft.com.np
               </a>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 text-gray-800">
               <Phone className="w-5 h-5 text-blue-600" />
               <a
                 href="tel:+977015453000"
-                className="hover:underline hover:text-blue-800"
+                className="hover:underline hover:text-blue-900"
               >
                 +977-01-5453000
               </a>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 text-gray-800">
               <Map className="w-5 h-5 text-blue-600" />
               <a
                 href="https://maps.app.goo.gl/WL15HwvJjdw8Kov3A"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline hover:text-blue-800"
+                className="hover:underline hover:text-blue-900"
               >
                 Ekantakuna, Lalitpur, Nepal
               </a>
@@ -115,52 +99,52 @@ const Maintenance = () => {
           </div>
 
           {/* Social Media */}
-          <div className="flex justify-center md:justify-start space-x-5">
+          <div className="flex gap-5 pt-4">
             <a
               href="https://www.facebook.com/digisoftdevelopers/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Facebook className="w-6 h-6 text-gray-700 hover:text-blue-600 transition" />
+              <Facebook className="w-6 h-6 text-gray-600 hover:text-blue-700" />
             </a>
             <a
               href="https://instagram.com/digisoftdevelopers"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram className="w-6 h-6 text-gray-700 hover:text-blue-600 transition" />
+              <Instagram className="w-6 h-6 text-gray-600 hover:text-blue-700" />
             </a>
             <a
               href="https://twitter.com/DigisoftL"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter className="w-6 h-6 text-gray-700 hover:text-blue-600 transition" />
+              <Twitter className="w-6 h-6 text-gray-600 hover:text-blue-700" />
             </a>
             <a
               href="https://www.linkedin.com/in/digisoft-developers-nepal-b7706a217/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="w-6 h-6 text-gray-700 hover:text-blue-600 transition" />
+              <Linkedin className="w-6 h-6 text-gray-600 hover:text-blue-700" />
             </a>
           </div>
         </div>
 
-        {/* Right Side - Illustration */}
-        <div className="hidden md:block">
+        {/* Right Image */}
+        <div className="w-full">
           <img
             src={maintenance}
             alt="Under Construction"
-            className="w-full max-h-[480px] object-contain"
+            className="w-full h-1/3 object-contain"
           />
         </div>
       </div>
 
       {/* Footer */}
-      <div className="mt-16 text-sm text-center text-gray-500">
+      <p className="mt-10 text-sm text-gray-600 text-center">
         &copy; {new Date().getFullYear()} Digisoft Developers Pvt. Ltd. All rights reserved.
-      </div>
+      </p>
     </div>
   );
 };
