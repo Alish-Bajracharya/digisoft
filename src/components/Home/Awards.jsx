@@ -1,4 +1,5 @@
-import React from 'react';
+import { motion } from "framer-motion";
+// import award1 from "../../assets/Home/home-tablet.png";
 import cust1 from "../../assets/customers/logo1.png";
 import cust2 from "../../assets/customers/logo2.png";
 import cust3 from "../../assets/customers/logo3.jpg";
@@ -11,20 +12,25 @@ const logos = [
   { src: cust3, alt: 'Shikali', path: "https://sikalinewa.com.np"},
 ];
 
-const Banner = () => {
+const Awards = () => {
   return (
-    <section className="py-10 bg-white">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-        
-        {/* Left: Title */}
-        <div className="w-full md:w-auto">
-          <p className="text-sm md:text-sm mt-6 font-medium tracking-widest text-blue-600 uppercase text-center md:text-left">
-            Our Customers
-          </p>
-        </div>
+    <div className="bg-white py-20 text-center px-40">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <p className="text-blue-500 uppercase tracking-widest text-sm py-5">Press & Awards</p>
+        <h2 className="text-4xl font-sans text-gray-800 mt-2 mb-10">Award winning design solutions</h2>
+        <p className="max-w-2xl mx-auto text-gray-600 text-sm leading-relaxed px-5 mb-20">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor.
+        </p>
+      </motion.div>
 
-        {/* Right: Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-40 opacity-100 grayscale hover:grayscale-0 transition duration-300">
+       <div className="flex flex-wrap justify-center  items-center gap-36 mb-10 opacity-100 grayscale hover:grayscale-0 transition duration-300">
           {logos.map((logo, index) =>
             logo.path ? (
               <a
@@ -49,9 +55,9 @@ const Banner = () => {
             )
           )}
         </div>
-      </div>
-    </section>
-  );
-};
 
-export default Banner;
+
+    </div>
+    );
+};
+export default Awards;

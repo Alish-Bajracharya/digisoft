@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom"; 
-import Logo from "../assets/images/digilogo.jpg"
+import Logo from "../assets/images/digilogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showProductMenu, setShowProductMenu] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
+  const [visible, setVisible] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(null);
+  
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { 
-      label: "Product", 
+    {
+      label: "Product",
       submenu: [
         { label: "Feature 1", href: "/product/feature1" },
         { label: "Feature 2", href: "/product/feature2" },
@@ -23,23 +26,32 @@ const Navbar = () => {
     { label: "News", href: "/news" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(currentScrollPos < 10 || currentScrollPos < prevScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        visible ? "bg-white shadow-md" : "-translate-y-full"
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center font-worksans">
         {/* Logo */}
         <div className="flex items-center gap-2">
-        <a href="/">
-            <img
-            src= {Logo}
-            alt="Horizon Logo"
-            className="h-8 md:h-10 object-contain"
-            />
-        </a>
-        <div className="text-xl font-semibold tracking-widest text-gray-900">
-                DIGISO<span className="rotate-180 inline-block">F</span> T
+          <a href="/">
+            <img src={Logo} alt="Logo" className="h-8 md:h-10 object-contain" />
+          </a>
+          <div className="text-xl font-semibold tracking-widest text-gray-900">
+            DIGISO<span className="rotate-180 inline-block">F</span>T
+          </div>
         </div>
-        </div>
-
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-sm font-medium text-gray-600 relative">
@@ -47,19 +59,25 @@ const Navbar = () => {
             item.submenu ? (
               <li
                 key={item.label}
-                className="relative group cursor-pointer"
                 onMouseEnter={() => setShowProductMenu(true)}
                 onMouseLeave={() => setShowProductMenu(false)}
+                onClick={() => setActiveMenu(item.label)} // <-- Set active
+                className={`relative group cursor-pointer pt-1 ${
+                  activeMenu === item.label ? "border-t-4 border-blue-500 text-gray-800" : ""
+                }`}
               >
-                <span className="hover:text-black transition">{item.label.toUpperCase()}</span>
+                <span className="hover:text-black transition">
+                  {item.label.toUpperCase()}
+                </span>
+
                 {/* Submenu */}
                 {showProductMenu && (
-                  <ul className="absolute top-8 left-0 -mt-2 bg-white shadow-lg rounded-md py-2 w-40 z-50">
+                  <ul className="absolute top-full left-0 mt-5 bg-white shadow-lg rounded-md py-2 w-44 z-50">
                     {item.submenu.map((sub) => (
                       <li key={sub.label}>
                         <a
                           href={sub.href}
-                          className="block hover:text-black px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                         >
                           {sub.label}
                         </a>
@@ -69,7 +87,13 @@ const Navbar = () => {
                 )}
               </li>
             ) : (
-              <li key={item.label}>
+              <li
+                key={item.label}
+                onClick={() => setActiveMenu(item.label)} 
+                className={`pt-1 ${
+                  activeMenu === item.label ? "border-t-4 border-blue-500 text-gray-800" : ""
+                }`}
+              >
                 <a
                   href={item.href}
                   className="hover:text-black transition duration-300"
@@ -81,7 +105,7 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Toggle */}
         <div className="md:hidden text-gray-900 text-xl">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <FaTimes /> : <FaBars />}
