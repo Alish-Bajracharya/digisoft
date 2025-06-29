@@ -15,9 +15,8 @@ const Navbar = () => {
     {
       label: "Product",
       submenu: [
-        { label: "Feature 1", href: "/product/feature1" },
-        { label: "Feature 2", href: "/product/feature2" },
-        { label: "Feature 3", href: "/product/feature3" },
+        { label: "Features", href: "/product/features" },
+        { label: "Enterprise", href: "/product/enterprise" },
       ],
     },
     { label: "Services", href: "/services" },
@@ -37,11 +36,15 @@ const Navbar = () => {
   }, [prevScrollPos]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        visible ? "bg-white shadow-md" : "-translate-y-full"
-      }`}
-    >
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          visible
+            ? "bg-white shadow-md border-b border-gray-200"
+            : prevScrollPos <= 10
+            ? "bg-transparent border-none"
+            : "-translate-y-full"
+        }`}
+      >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center font-worksans">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -72,7 +75,7 @@ const Navbar = () => {
 
                 {/* Submenu */}
                 {showProductMenu && (
-                  <ul className="absolute top-full left-0 mt-5 bg-white shadow-lg rounded-md py-2 w-44 z-50">
+                  <ul className="absolute top-full left-0 mt-5 bg-white shadow-lg border py-2 w-44 z-10">
                     {item.submenu.map((sub) => (
                       <li key={sub.label}>
                         <a

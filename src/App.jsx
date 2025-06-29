@@ -1,27 +1,20 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Home/Hero";
-import Banner from "./components/Home/Banner";
-import Maintenance from "./pages/UMaintenance.jsx";
-import Services from "./components/Home/Services.jsx";
-import Careers from "./components/Home/Careers.jsx";
-import Products from "./components/Home/Products.jsx";
-import Awards from "./components/Home/awards.jsx";
-import Image from "./components/Home/Image.jsx";
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Maintenance from "./pages/UMaintenance";
+import Services from "./pages/Services";
+
 
 function App() {
   return (
-    
-    <div className="relative">
-      <Maintenance />
-      <Navbar />
-      <Hero />
-      <Banner />
-      <Services/>
-      <Careers/>
-      <Products/>
-      <Awards />
-      <Image />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/maintenance" element={<Maintenance />} />
+        <Route path="/services" element={<Services />} />
+
+      </Routes>
+    </Router>
   );
 }
 

@@ -21,7 +21,7 @@ const Hero = () => {
           <p className="text-sm font-medium text-blue-600 tracking-widest mb-10">
             WHAT WE DO
           </p>
-          <h1 className="text-4xl md:text-4xl text-sm font-roboto text-gray-900 leading-tight mb-4">
+          <h1 className="text-4xl md:text-4xl font-roboto text-gray-900 leading-tight mb-4">
             We create an all round <br />
             experience for your business
           </h1>

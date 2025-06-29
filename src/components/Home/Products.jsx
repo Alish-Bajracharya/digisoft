@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import tabletImg from "../../assets/Home/home-tablet.png";
+import tabletImg from "../../assets/Home/1.png";
 
 const Products = () => {
   return (
