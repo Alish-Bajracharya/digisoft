@@ -12,34 +12,35 @@ const features = [
   {
     icon: <Smile className="h-8 w-8 text-blue-500" />,
     title: "Manage Teams",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "Easily create, assign, and manage teams across departments - keeping everyone aligned and accountable.",
   },
   {
     icon: <Users className="h-8 w-8 text-blue-500" />,
     title: "Team Activity",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "Get real-time updates on team performance, tasks, and timelines - all from a single dashboard.",
   },
   {
     icon: <BarChart2 className="h-8 w-8 text-blue-500" />,
     title: "Manage Projects",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "Organize tasks, set priorities, and track project milestones to ensure nothing falls through the cracks.",
   },
   {
     icon: <MessageCircle className="h-8 w-8 text-blue-500" />,
     title: "Real-Time Communication",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "Chat, share files, and collaborate instantly with built-in messaging for seamless teamwork.",
   },
   {
     icon: <CheckSquare className="h-8 w-8 text-blue-500" />,
     title: "Team Statistics",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "Analyze performance metrics and gain insights into productivity, workload, and team health.",
   },
   {
     icon: <RefreshCw className="h-8 w-8 text-blue-500" />,
     title: "Unlimited Sharing",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "Securely share documents, feedback, and updates without limits - anytime, anywhere.",
   },
 ];
+
 
 const fadeIn = (delay = 0) => ({
   hidden: { opacity: 0, y: 20 },

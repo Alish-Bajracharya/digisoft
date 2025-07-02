@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components/Service/Hero";
+import ServiceHero from "../components/Service/ServiceHero";
 import AdditionalService from "../components/Service/AdditionalS"
 import Idea from "../components/Service/Idea";
 import TeamFeatures from "../components/Service/TeamFeatures";
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="relative">
       <Navbar />
-      <Hero />
+      <ServiceHero />
       <AdditionalService/>
       <Idea/>
       <TeamFeatures />

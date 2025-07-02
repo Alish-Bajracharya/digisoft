@@ -1,17 +1,16 @@
 import React from "react";
-import phoneImage from "../../assets/Home/home.jpg";
+import phoneImage from "../../assets/Home/home1.jpg";
 
 const AdvancedS = () => {
   return (
-    <section className="py-20 bg-white text-center">
-      <div className="max-w-4xl mx-auto mb-16 px-4">
-        <p className="text-xs tracking-widest text-blue-600 font-medium uppercase py-5">
+    <section className="py-20 bg-white text-center ">
+      <div className="max-w-4xl mx-auto mb-16 px-4 border-t-2 ">
+        <p className="text-xs tracking-widest text-blue-600 font-medium uppercase mt-20 py-5">
           Additions
         </p>
         <h2 className="text-3xl font-extralight py-5">Advanced Services</h2>
         <p className="text-gray-500 mx-auto px-16 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          We go beyond the basics - offering advanced features that bring efficiency, insights, and a seamless experience to your digital ecosystem.
         </p>
       </div>
 
@@ -21,13 +20,14 @@ const AdvancedS = () => {
           <div>
             <h4 className="text-lg font-light justify-center text-center mb-2">User Profiles</h4>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod magna aliqua.
+              Create detailed user profiles with personalized dashboards, preferences, and activity tracking for smarter engagement.
             </p>
           </div>
+
           <div>
             <h4 className="text-lg font-light justify-center text-center mb-2">Statistics</h4>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod magna aliqua.
+              Access real-time analytics and insightful reports to monitor performance, trends, and business growth.
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ const AdvancedS = () => {
           <img
             src={phoneImage}
             alt="Phone Mockup"
-            className="w-64 md:w-72 object-contain mx-auto"
+            className="w-64 md:w-96   object-contain mx-auto"
           />
         </div>
 
@@ -46,13 +46,14 @@ const AdvancedS = () => {
           <div>
             <h4 className="text-lg font-light justify-center text-center mb-2">Organization</h4>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod magna aliqua.
+              Keep everything streamlined with smart data structuring, team roles, and automated workflows tailored to your needs.
             </p>
           </div>
+
           <div>
             <h4 className="text-lg font-light justify-center text-center mb-2">Accessibility</h4>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod magna aliqua.
+              Built with inclusive design and responsive technology to ensure seamless access across all devices and users.
             </p>
           </div>
         </div>

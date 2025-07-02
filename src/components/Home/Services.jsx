@@ -5,24 +5,25 @@ const services = [
   {
     icon: <Search className="w-8 h-8 text-gray-400" />,
     title: "Discovery & Strategy",
-    desc: "Lorem ipsum dolor sit amet, gravida nonna maecenas veritatis vestum.",
+    desc: "We dive deep into your business goals to craft tailored strategies that align with your vision and target audience.",
   },
   {
     icon: <Heart className="w-8 h-8 text-gray-400" />,
     title: "User Retargeting",
-    desc: "Lorem ipsum dolor sit amet, gravida nonna maecenas veritatis vestum.",
+    desc: "Boost conversions by re-engaging your audience with data-driven retargeting campaigns across web and social platforms.",
   },
   {
     icon: <MonitorSmartphone className="w-8 h-8 text-gray-400" />,
     title: "Web Design & Development",
-    desc: "Lorem ipsum dolor sit amet, gravida nonna maecenas veritatis vestum.",
+    desc: "Build modern, mobile-responsive websites and custom web apps that are fast, secure, and designed to convert.",
   },
   {
     icon: <BarChart3 className="w-8 h-8 text-gray-400" />,
     title: "Performance Marketing",
-    desc: "Lorem ipsum dolor sit amet, gravida nonna maecenas veritatis vestum.",
+    desc: "Maximize your ROI with strategic digital ad campaigns, SEO, and performance tracking to grow your online presence.",
   },
 ];
+
 
 const Services = () => {
   return (
@@ -41,12 +42,10 @@ const Services = () => {
             Services
           </p>
           <h2 className="text-2xl md:text-4xl font-normal py-4 mb-6 text-gray-700">
-            Apps and end devices <br /> that suit your needs
+            Smart Solutions for <br /> Your Digital Success
           </h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-14">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Aenean commodo ligula eget dolor. Aenean massa. Cum 
-            sociis natoque.
+            We offer end-to-end IT and digital marketing services from strategy and branding to development and hosting helping you build, grow, and scale in a digital-first world.
           </p>
           <a
             href="#"

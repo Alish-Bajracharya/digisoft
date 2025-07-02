@@ -18,21 +18,20 @@ const Hero = () => {
             show ? "translate-x-0 opacity-90" : "-translate-x-10 opacity-0"
           }`}
         >
-          <p className="text-sm font-medium text-blue-600 tracking-widest mb-10">
-            WHAT WE DO
-          </p>
-          <h1 className="text-4xl md:text-4xl font-roboto text-gray-900 leading-tight mb-4">
-            We create an all round <br />
-            experience for your business
-          </h1>
-          <p className="text-gray-600 text-base mb-6 max-w-md">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis penatibus et
-            magnis.
-          </p>
-          <button className="bg-white px-6 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition">
-            EXPLORE
-          </button>
+        <p className="text-sm font-medium text-blue-600 tracking-widest mb-10">
+          WHAT WE DO
+        </p>
+        <h1 className="text-4xl md:text-4xl font-roboto text-gray-900 leading-tight mb-4">
+          Powering Innovation <br />
+          with Smart IT Solutions
+        </h1>
+        <p className="text-gray-600 text-base mb-6 max-w-md">
+          From enterprise software to digital marketing and web hosting — we empower
+          businesses with cutting-edge technology, strategy, and support. Scale smarter, grow faster.
+        </p>
+        <button className="bg-white px-6 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition">
+          DISCOVER MORE
+        </button>
         </div>
 
         {/* Right Image */}

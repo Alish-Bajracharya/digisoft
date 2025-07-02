@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import phoneImage from "../../assets/Home/Home.jpg"; 
 
 const stats = [
-  { value: "12", label: "Employees" },
-  { value: "$10M", label: "Invested" },
-  { value: "92%", label: "Success Rate" },
+  { value: "12+", label: "Team Members" },
+  { value: "$10M+", label: "Projects Delivered" },
+  { value: "92%", label: "Client Satisfaction" },
 ];
+
 
 const Careers = () => {
   return (
@@ -43,7 +44,7 @@ const Careers = () => {
             Let’s build great things together
           </h2>
           <p className="text-gray-500 justify-between text-center mb-10 text-sm md:text-sm max-w-xl mx-auto md:mx-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            We’re a passionate team of developers, designers, and digital experts driven by technology and innovation. Join us to work on exciting projects, grow your skills, and help shape the future of IT and digital solutions.
           </p>
 
           {/* Stats */}
@@ -53,7 +54,7 @@ const Careers = () => {
                 <div className="text-2xl md:text-5xl  text-gray-600">
                   {stat.value}
                 </div>
-                <div className="text-xs tracking-widest text-blue-600 font-medium uppercase mt-2">
+                <div className="text-xs tracking-wider text-blue-700 font-thin uppercase mt-3">
                   {stat.label}
                 </div>
               </div>

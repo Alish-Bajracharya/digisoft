@@ -13,10 +13,7 @@ const Idea = () => {
             online experience
           </h2>
           <p className="mt-6 text-gray-500 max-w-md md:max-w-full text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Whether you're starting from scratch or refining an existing concept, we help bring your vision to life — from planning and prototyping to design, development, and deployment. End-to-end digital transformation, all under one roof.
           </p>
         </div>
 

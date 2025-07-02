@@ -20,13 +20,14 @@ const Awards = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <p className="text-blue-500 uppercase tracking-widest text-sm py-5">Press & Awards</p>
-        <h2 className="text-4xl font-sans text-gray-800 mt-2 mb-10">Award winning design solutions</h2>
+       <p className="text-blue-500 uppercase tracking-widest text-sm py-5">
+          Press & Awards
+        </p>
+        <h2 className="text-4xl font-sans text-gray-800 mt-2 mb-10">
+          Award-Winning Digital Solutions
+        </h2>
         <p className="max-w-2xl mx-auto text-gray-600 text-sm leading-relaxed px-5 mb-20">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor.
+          Recognized for our commitment to innovation, design, and reliability - we’re proud to be the trusted tech partner for leading businesses and organizations. Explore the brands that believe in our work.
         </p>
       </motion.div>
 
