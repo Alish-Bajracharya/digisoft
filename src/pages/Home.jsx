@@ -6,6 +6,7 @@ import Careers from "../components/Home/Careers";
 import Products from "../components/Home/Products";
 import Awards from "../components/Home/Award";
 import Image from "../components/Home/Image";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Products />
       <Awards />
       <Image />
+      <Footer/>
     </div>
   );
 };

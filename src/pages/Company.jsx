@@ -3,6 +3,8 @@ import CompanyHero from "../components/Company/CompanyHero";
 import Welcome from "../components/Company/Welcome";
 import About from "../components/Company/About";
 import Clients from "../components/Company/Clients";
+import Contact from "../components/Company/Talk";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -13,6 +15,8 @@ const Home = () => {
       <Welcome />
       <About />
       <Clients />
+      <Contact />
+      <Footer/>
     
     </div>
   );

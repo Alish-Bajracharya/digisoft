@@ -4,20 +4,21 @@ import Img2 from "../../assets/images/services-header.webp";
 
 const About = () => {
   return (
-    <div className="bg-[#f4f5f7] py-20 px-4 md:px-10 lg:px-28">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    <section className="bg-[#f4f5f7] py-20 font-worksans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         
-        {/* First Column */}
+        {/* First Column - Our Story */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="flex flex-col"
         >
           <img
             src={Img1}
             alt="Our Story"
-            className="w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover shadow-sm"
+            className="w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover shadow-sm rounded"
           />
 
           <div className="mt-6 text-gray-800">
@@ -28,17 +29,18 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Second Column */}
+        {/* Second Column - What we do */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
+          viewport={{ once: true }}
           className="flex flex-col"
         >
           <img
             src={Img2}
             alt="What we do"
-            className="w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover shadow-sm"
+            className="w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover shadow-sm rounded"
           />
 
           <div className="mt-6 text-gray-800">
@@ -49,7 +51,7 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

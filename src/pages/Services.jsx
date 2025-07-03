@@ -4,6 +4,7 @@ import AdditionalService from "../components/Service/AdditionalS"
 import Idea from "../components/Service/Idea";
 import TeamFeatures from "../components/Service/TeamFeatures";
 import ContactSection from "../components/Service/ContactSection";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Idea/>
       <TeamFeatures />
       <ContactSection />
+      <Footer/>
      
     </div>
   );

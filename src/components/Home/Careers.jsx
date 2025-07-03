@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import phoneImage from "../../assets/Home/Home.jpg"; 
+import phoneImage from "../../assets/Home/home.jpg"; 
 
 const stats = [
   { value: "12+", label: "Team Members" },

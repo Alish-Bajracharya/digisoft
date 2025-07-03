@@ -12,16 +12,9 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    {
-      label: "Product",
-      submenu: [
-        { label: "Features", href: "/product/features" },
-        { label: "Enterprise", href: "/product/enterprise" },
-      ],
-    },
     { label: "Services", href: "/services" },
     { label: "Company", href: "/company" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Meet Our Team", href: "/our-team" },
     { label: "News", href: "/news" },
   ];
 

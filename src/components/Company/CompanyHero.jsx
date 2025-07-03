@@ -19,7 +19,7 @@ const CompanyHero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-4xl md:text-5xl font-light text-gray-800 mb-4"
+          className="text-4xl md:text-4xl font-light text-gray-800 mb-4"
         >
           Meet the Visionaries Behind Digisoft
         </motion.h1>
@@ -28,7 +28,7 @@ const CompanyHero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-gray-600 text-sm md:text-base leading-relaxed"
+          className="text-gray-600 text-xs px-40 md:text-sm leading-relaxed"
         >
           At Digisoft, our passionate team combines innovation, expertise, and dedication to deliver cutting-edge IT and digital marketing solutions that empower businesses worldwide.
         </motion.p>

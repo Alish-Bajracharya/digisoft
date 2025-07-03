@@ -8,7 +8,7 @@ const Idea = () => {
         
         {/* Left Text */}
         <div className="w-full md:w-1/2 text-center justify-center md:text-left">
-          <h2 className="text-4xl font-light text-center text-gray-800 leading-snug">
+          <h2 className="text-5xl font-thin text-center text-gray-800 leading-snug">
             From the idea to a full <br />
             online experience
           </h2>
