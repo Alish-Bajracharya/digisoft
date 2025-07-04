@@ -52,7 +52,7 @@ const ContactSection = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 px-8 py-2 text-sm font-thin text-black bg-white rounded-full shadow-md hover:text-blue-600 transition"
+          className="mt-6 px-8 py-2 text-sm font-thin text-black bg-white rounded-full cursor-pointer shadow-md hover:text-blue-600 transition"
           variants={itemVariants}
         >
           Contact Us
@@ -68,7 +68,7 @@ const ContactSection = () => {
         <img
           src={map}
           alt="World Map Dots"
-          className="max-w-full w-[90%] md:w-[80%] lg:w-[70%] xl:w-[850px] -mt-32 mx-auto"
+          className="max-w-full w-[90%] md:w-[80%] lg:w-[70%] xl:w-[850px] mx-auto"
         />
       </motion.div>
 

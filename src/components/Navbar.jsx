@@ -12,10 +12,10 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "Company", href: "/company" },
-    { label: "Meet Our Team", href: "/our-team" },
-    { label: "News", href: "/news" },
+    { label: "Services", href: "/#/services" },
+    { label: "Company", href: "/#/company" },
+    { label: "Meet Our Team", href: "/#/our-team" },
+    { label: "News", href: "/#/news" },
   ];
 
   useEffect(() => {

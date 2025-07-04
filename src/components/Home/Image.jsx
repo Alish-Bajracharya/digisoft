@@ -12,13 +12,13 @@ const imageData = [
   },
   {
     src: img2,
-    text: 'EXPLORE ALL PRODUCTS',
-    link: '#products',
+    text: 'EXPLORE ALL Services',
+    link: '/services',
   },
   {
     src: img3,
     text: 'LATEST NEWS',
-    link: '#news',
+    link: '/news',
   },
 ];
 
