@@ -74,7 +74,7 @@ const teamData = [
     category: 'Creative',
     image: DMi,
     linkedin: 'https://www.linkedin.com/in/luja-maharjan-a81988363/',
-    github: 'https://github.com/blurryFace8',
+    github: 'https://github.com/luja-maharjan',
     bio: 'Creative content specialist supporting campaigns and visual media.'
   },
   {
