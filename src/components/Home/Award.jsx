@@ -11,55 +11,78 @@ const logos = [
   { src: cust3, alt: "Shikali", path: "https://sikalinewa.com.np" },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 const Awards = () => {
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-20 text-center">
+    <div className="bg-white py-20 text-center px-4 sm:px-10 md:px-20 lg:px-40">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <p className="text-blue-500 uppercase tracking-widest text-xs sm:text-sm py-3">
+        <p className="text-blue-500 uppercase tracking-widest text-sm py-5">
           Press & Awards
         </p>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-sans text-gray-800 mt-2 mb-6">
+        <h2 className="text-4xl font-sans text-gray-800 mt-2 mb-10">
           Award-Winning Digital Solutions
         </h2>
-        <p className="max-w-3xl mx-auto text-gray-600 text-sm sm:text-base leading-relaxed px-2 sm:px-5 mb-12">
-          Recognized for our commitment to innovation, design, and reliability — we’re proud to be the trusted tech partner for leading businesses and organizations. Explore the brands that believe in our work.
+        <p className="max-w-2xl mx-auto text-gray-600 text-sm leading-relaxed px-5 mb-20">
+          Recognized for our commitment to innovation, design, and reliability - we’re proud to be the trusted tech partner for leading businesses and organizations. Explore the brands that believe in our work.
         </p>
       </motion.div>
 
+      {/* Animated Logo Section */}
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 justify-items-center items-center grayscale hover:grayscale-0 transition duration-300"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex flex-wrap justify-center items-center gap-20 sm:gap-28 md:gap-36 mb-10 grayscale hover:grayscale-0 transition duration-300"
       >
-        {logos.map((logo, index) =>
-          logo.path ? (
-            <a
-              key={index}
-              href={logo.path}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
+        {logos.map((logo, index) => (
+          <motion.div key={index} variants={itemVariants}>
+            {logo.path ? (
+              <a
+                href={logo.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-16 md:h-14 object-contain"
+                />
+              </a>
+            ) : (
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="h-10 sm:h-12 md:h-14 object-contain"
+                className="h-6 md:h-8 object-contain"
               />
-            </a>
-          ) : (
-            <img
-              key={index}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-10 sm:h-12 md:h-14 object-contain"
-            />
-          )
-        )}
+            )}
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
