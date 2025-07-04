@@ -24,11 +24,10 @@ const services = [
   },
 ];
 
-
 const Services = () => {
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 mt-10 grid md:grid-cols-2 gap-10 items-center">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left Content */}
         <motion.div
@@ -36,7 +35,7 @@ const Services = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white px-24 py-14 shadow-lg"
+          className="bg-white px-6 sm:px-10 md:px-14 lg:px-20 py-10 sm:py-12 shadow-lg text-center md:text-left"
         >
           <p className="text-xs text-blue-600 font-semibold tracking-widest uppercase py-4">
             Services
@@ -54,20 +53,22 @@ const Services = () => {
             See in details
           </a>
         </motion.div>
-
+        
         {/* Right Grid */}
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 sm:grid-cols-2 py-5 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-8"
         >
           {services.map((service, index) => (
-            <div key={index} className="flex flex-col space-y-2 py-5">
+            <div key={index} className="flex flex-col">
               {service.icon}
-              <h3 className="text-gray-700 font-normal text-lg py-3">{service.title}</h3>
-              <p className="text-sm text-gray-500 mt-10">{service.desc}</p>
+              <h3 className="text-gray-700 font-semibold text-lg mt-4 mb-2">
+                {service.title}
+              </h3>
+              <p className="text-sm text-gray-500">{service.desc}</p>
             </div>
           ))}
         </motion.div>

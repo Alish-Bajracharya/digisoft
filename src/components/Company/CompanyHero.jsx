@@ -5,7 +5,7 @@ import towerImage from "../../assets/images/company-header-e22775c7.webp";
 const CompanyHero = () => {
   return (
     <section className="bg-[#e9edf1] relative w-full h-screen overflow-hidden font-worksans flex items-center justify-center px-4">
-      <div className="max-w-5xl mx-auto text-center z-10">
+      <div className="max-w-5xl mx-auto text-center z-10 px-4 sm:px-6 md:px-8">
         <motion.p
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ const CompanyHero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-4xl md:text-4xl font-light text-gray-800 mb-4"
+          className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-800 mb-4"
         >
           Meet the Visionaries Behind Digisoft
         </motion.h1>
@@ -28,14 +28,13 @@ const CompanyHero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-gray-600 text-xs px-40 md:text-sm leading-relaxed"
+          className="text-gray-600 text-xs sm:text-sm leading-relaxed px-4 sm:px-10 md:px-20 lg:px-40"
         >
           At Digisoft, our passionate team combines innovation, expertise, and dedication to deliver cutting-edge IT and digital marketing solutions that empower businesses worldwide.
         </motion.p>
-
       </div>
 
-      {/* Right Side Image */}
+      {/* Right Side Image - shown only on medium+ screens */}
       <motion.img
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
