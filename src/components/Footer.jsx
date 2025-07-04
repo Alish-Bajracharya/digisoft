@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
 
         {/* Products */}
         <div>
-          <h2 className="font-semibold uppercase text-gray-900 mb-4">Products</h2>
+          <h2 className="font-semibold uppercase text-gray-900 mb-4">Services</h2>
           <ul className="space-y-2 text-gray-500">
             <li><a href="#">Web Development</a></li>
             <li><a href="#">Mobile Apps</a></li>
@@ -25,20 +25,21 @@ const Footer = () => {
         <div>
           <h2 className="font-semibold uppercase text-gray-900 mb-4">Company</h2>
           <ul className="space-y-2 text-gray-500">
-            <li><a href="/#/company">About Us</a></li>
-            <li><a href="/#/services">Careers</a></li>
-            <li><a href="/#/our-team">Meet the Team</a></li>
+            <li><a href="/company">About Us</a></li>
+            <li><a href="/services">Careers</a></li>
+            <li><a href="/our-team">Meet the Team</a></li>
           </ul>
         </div>
 
         {/* Contact Us */}
         <div>
           <h2 className="font-semibold uppercase text-gray-900 mb-4">Contact Us</h2>
-          <p className="text-gray-500 mb-3">info@digisoft.com</p>
-          <div className="flex space-x-4 text-gray-400 text-lg">
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaFacebookF /></a>
+          <a href="mailto:info@digisoft.com" className='text-gray-500 hover:text-blue-500 hover:underline'>info@digisoft.com</a>
+          <div className="flex space-x-4 text-gray-400 text-lg mt-3 ">
+            <a href="#" className='hover:text-red-500'><FaInstagram /></a>
+            <a href="#" className='hover:text-blue-500'><FaTwitter /></a>
+            <a href="#" className='hover:text-blue-500'><FaFacebookF /></a>
+            <a href="#" className='hover:text-blue-500'><FaLinkedin/></a>
           </div>
         </div>
       </div>
