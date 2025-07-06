@@ -25,9 +25,9 @@ const Footer = () => {
         <div>
           <h2 className="font-semibold uppercase text-gray-900 mb-4">Company</h2>
           <ul className="space-y-2 text-gray-500">
-            <li><a href="/#/company">About Us</a></li>
-            <li><a href="/#/services">Careers</a></li>
-            <li><a href="/#/our-team">Meet the Team</a></li>
+            <li><a href="/#/company" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>About Us</a></li>
+            <li><a href="/#/services" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Careers</a></li>
+            <li><a href="/#/our-team" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Meet the Team</a></li>
           </ul>
         </div>
 
